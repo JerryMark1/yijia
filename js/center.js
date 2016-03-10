@@ -1,33 +1,27 @@
 $(function(){
-	$(document).on("scroll",function(){
-		if($(document).scrollTop()>300){
-			$(".carousel-indicators").hide().animate({
-				opacity:0
-			});
-			$(".yu-phone").css({
-				marginTop:-100
-			})
+	$(window).on("scroll",function(){
+		var scrolltop=$(window).scrollTop();
+		var istop=true;
+		if(scrolltop>0 && scrolltop<400){
+			if(istop==true){
+				$(".yu-wrap").css({
+					top:scrolltop
+				})
+				$(".carousel-inner img").css({
+					marginTop:-scrolltop
+				})
+				istop=false;
+			}
+		}
+		if(scrolltop<=0){
+			var height=$(window).height();
+			console.log(height);
+			$(".yu-wrap").css({
+					top:0
+				})
 			$(".carousel-inner img").css({
-				marginTop:-200
-			})
-		}else{
-			$(".yu-phone").css({
-				marginTop:0
-			})
-			$(".carousel-inner img").css({
-				marginTop:-100
-			})
-			$(".carousel-indicators").show().animate({
-				opacity:1
-			});
-		}		
+					marginTop:-100
+				})
+		}
 	})
-	// $(".yu-bao .col-sm-4").hover(function(){
-	// 	var index=$(this).index();
-	// 	console.log(index);
-	// 	$(this).animate({
-	// 		bottom:0
-	// 	})
-
-	// })
 })

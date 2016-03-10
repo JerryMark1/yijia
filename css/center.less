@@ -16,6 +16,16 @@ html,body{
 	margin-top:-100px;
 	z-index: -1;	
 }
+.yu-wrap{
+	position: relative;
+	top:0;
+	background:#fff;
+	width:100%;
+	height:auto;
+	&:hover{
+		cursor: pointer;
+	}
+}
 
 
 /* 手机展示 */
@@ -30,6 +40,7 @@ html,body{
 	.row{	
 	.col-sm-4{
 		&:hover{
+			cursor: pointer;
 			p,div{
 				color:#ef3756;
 			}
@@ -51,6 +62,18 @@ html,body{
 		}
 	}
 }
+.yu-san-er{
+	display: none;
+}
+// @media screen and(max-width:750px) {
+// 	.yu-san-er{
+// 			display: block;
+// 			// position: relative;
+// 		}
+// 		.yu-phone{
+// 			display: none;
+// 		}
+// }
 
 /* 说明图 */
 .yu-bao{
@@ -58,6 +81,15 @@ html,body{
 		.col-sm-4{
 			padding-left:0;
 			padding-right:0;
+			&:hover{
+				cursor: pointer;
+					span{
+						top:-100px;
+					}
+					div{
+						bottom:0;						
+					}
+			}
 			span{
 					background:red;
 					display: inline-block;
@@ -66,6 +98,7 @@ html,body{
 				    width: 100%;
 				    height: 540px;
 				    position: relative;
+				    transition: all .15s linear;
 				    top: 0;
 			}
 			div{				
@@ -80,7 +113,7 @@ html,body{
 			    z-index: 5;
 			    bottom: -100px;
 			    color: #fff;
-			    transition: all .15s;
+			    transition: all .15s linear;
 			    h3{
 			    	font-size: 1.8rem;
 			    }
@@ -88,6 +121,55 @@ html,body{
 		}
 		
 	}
+}
+
+/* 当屏幕小于750的时候 说明图的布局 */
+@media screen and(max-width:780px){
+	.yu-bao{
+	.row{
+		.col-sm-4{
+			padding-left:0;
+			padding-right:0;
+			&:hover{
+				cursor: pointer;
+					span{
+						top:-100px;
+					}
+					div{
+						bottom:0;						
+					}
+			}
+			span{					
+					display: inline-block;
+					background-size: cover!important;
+				    display: block;
+				    width: 100%;
+				    height: 540px;
+				    position: relative;
+				    transition: all .15s linear;
+				    top: 0;
+			}
+			div{				
+				text-overflow: ellipsis;
+				white-space: nowrap;
+				width:100%;
+				color:white;
+				padding: 21px 5% 0;
+				background-color: #3c3c3c;			  	
+			    background: #3c3c3c;
+			    position: absolute;
+			    z-index: -1;
+			    bottom: -100px;
+			    color: #fff;
+			    transition: all .15s linear;
+			    h3{
+			    	font-size: 1.8rem;
+			    }
+		}
+		}
+		
+	}
+}
 }
 /* 第三栏展示图 */
 .yu-zs{
@@ -99,8 +181,32 @@ html,body{
 			width:100%;
 		}
 	}
+	.small{
+		display: none;
+	}
+
+}
+@media screen and(max-width:750px){
+		.yu-zs{
+			position: relative;
+			overflow: hidden;
+			z-index: 6;
+			width:100%;
+			background-color: #fff;
+			a{
+				display: none;
+
+				img{
+					width:50%;
+					margin:0 auto;
+				}
+			}
+			.small{
+				display: block;
+			}
 
 }
 
+}
 
 
