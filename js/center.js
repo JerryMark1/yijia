@@ -7,7 +7,7 @@ $(function(){
 				$(".yu-wrap").css({
 					top:scrolltop
 				})
-				$(".carousel-inner img").css({
+				$(".yu-img img").css({
 					marginTop:-scrolltop
 				})
 				istop=false;
@@ -19,7 +19,7 @@ $(function(){
 			$(".yu-wrap").css({
 					top:0
 				})
-			$(".carousel-inner img").css({
+			$(".yu-img img").css({
 					marginTop:-100
 				})
 		}

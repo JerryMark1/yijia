@@ -6,8 +6,14 @@ body {
   height: 100%;
 }
 /* 轮播图 */
+.yu-carousel {
+  margin-bottom: 30px;
+}
 .yu-carousel li {
   background-color: #999;
+}
+.yu-carousel.active {
+  background-color: red;
 }
 #carousel-example-generic img {
   position: relative;
@@ -55,6 +61,58 @@ body {
 }
 .yu-san-er {
   display: none;
+}
+@media screen and (max-width: 750px) {
+  .yu-san-er {
+    padding: 50px 0;
+    display: block;
+    position: relative;
+    width: 100%;
+    height: auto;
+    z-index: 20;
+    background: white;
+  }
+  .yu-san-er .carousel-inner img {
+    width: 200px;
+    height: auto;
+    margin: 0 auto;
+    z-index: 20;
+  }
+  .yu-san-er .yu-top {
+    margin-bottom: -50px;
+  }
+  .yu-san-er .yu-top li {
+    background-color: #999;
+  }
+  .yu-san-er .yu-top .active {
+    background-color: #d9d9d9;
+  }
+  .yu-san-er .yu-center {
+    text-align: center;
+  }
+  .yu-san-er .yu-center p,
+  .yu-san-er .yu-center div {
+    font-size: 1.5em;
+  }
+  .yu-san-er #carousel-example-generic img {
+    position: relative;
+    left: 0;
+    margin-top: 0;
+    z-index: -1;
+  }
+  .yu-san-er .yu-wrap {
+    position: relative;
+    top: 0;
+    background: #fff;
+    width: 100%;
+    height: auto;
+  }
+  .yu-san-er .yu-wrap:hover {
+    cursor: pointer;
+  }
+  .yu-phone {
+    display: none;
+  }
 }
 /* 说明图 */
 .yu-bao .row .col-sm-4 {
